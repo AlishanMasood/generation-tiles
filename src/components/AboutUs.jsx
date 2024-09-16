@@ -1,15 +1,15 @@
 import profile from "../assets/hanan.png";
-const links = [
-  { name: "Kitchen", href: "#" },
-  { name: "Tiles", href: "#" },
-  { name: "Sanitary", href: "#" },
-  { name: "Stone Blocks", href: "#" },
-];
 const stats = [
-  { name: "Branches", value: "1" },
-  { name: "Employees", value: "7" },
-  { name: "Hours per week", value: "12" },
-  { name: "Off day", value: "Friday" },
+  { name: "Influencing Digital Landscapes Together", value: "5+ Years" },
+  { name: "Excellence Achieved Through Success", value: "125+ Projects" },
+  {
+    name: "Our Dedication to Innovation Wins Understanding",
+    value: "26+ Awards",
+  },
+  {
+    name: "Mirrors our Focus on Client Satisfaction.",
+    value: "99% Happy Clients",
+  },
 ];
 export default function AboutUs() {
   return (
@@ -22,7 +22,7 @@ export default function AboutUs() {
                 <h6 class="text-gray-400 text-base font-normal leading-relaxed">
                   About Us
                 </h6>
-                <div class="w-full flex-col justify-start lg:items-start items-center gap-3 flex">
+                <div class="w-full flex-col justify-start lg:items-start items-center gap-3 flex ">
                   <h2 class="text-gray-900 text-4xl font-bold font-manrope leading-normal lg:text-start text-center">
                     The Tale of Our Achievement Story
                   </h2>
@@ -36,40 +36,18 @@ export default function AboutUs() {
               </div>
               <div class="w-full flex-col justify-center items-start gap-6 flex">
                 <div class="w-full justify-start items-center gap-8 grid md:grid-cols-2 grid-cols-1">
-                  <div class="w-full h-full p-3.5 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
-                    <h4 class="text-gray-900 text-2xl font-bold font-manrope leading-9">
-                      33+ Years
-                    </h4>
-                    <p class="text-gray-500 text-base font-normal leading-relaxed">
-                      Influencing Digital Landscapes Together
-                    </p>
-                  </div>
-                  <div class="w-full h-full p-3.5 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
-                    <h4 class="text-gray-900 text-2xl font-bold font-manrope leading-9">
-                      125+ Projects
-                    </h4>
-                    <p class="text-gray-500 text-base font-normal leading-relaxed">
-                      Excellence Achieved Through Success
-                    </p>
-                  </div>
-                </div>
-                <div class="w-full h-full justify-start items-center gap-8 grid md:grid-cols-2 grid-cols-1">
-                  <div class="w-full p-3.5 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
-                    <h4 class="text-gray-900 text-2xl font-bold font-manrope leading-9">
-                      26+ Awards
-                    </h4>
-                    <p class="text-gray-500 text-base font-normal leading-relaxed">
-                      Our Dedication to Innovation Wins Understanding
-                    </p>
-                  </div>
-                  <div class="w-full h-full p-3.5 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
-                    <h4 class="text-gray-900 text-2xl font-bold font-manrope leading-9">
-                      99% Happy Clients
-                    </h4>
-                    <p class="text-gray-500 text-base font-normal leading-relaxed">
-                      Mirrors our Focus on Client Satisfaction.
-                    </p>
-                  </div>
+                  {stats.map((item) => {
+                    return (
+                      <div class=" hover:scale-110 w-full h-full p-3.5 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
+                        <h4 class="text-gray-900 text-2xl font-bold font-manrope leading-9">
+                          {item.value}
+                        </h4>
+                        <p class="text-gray-500 text-base font-normal leading-relaxed">
+                          {item.name}
+                        </p>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>
