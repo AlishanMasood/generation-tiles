@@ -140,12 +140,21 @@ export default function Header() {
             className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
           />
         </div>
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div className="text-center">
+        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 ">
+          <div
+            className="text-center shadow-2xl bg-blend-lighten"
+            style={{
+              background: "rgba(203,203,203,0.2)",
+              boxShadow: "0px 0px 150px 0px white",
+              borderRadius: "20px",
+              padding: "16px",
+              backdropFilter: "blur(5px)",
+            }}
+          >
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
               Where Style Meets Function: Luxury Tiles & Sanitary Essentials
             </h1>
-            <p className="mt-6 text-lg leading-8 text-white">
+            <p className="mt-6 text-lg leading-8 text-gray-900">
               Discover a curated selection of premium tiles and top-quality
               sanitary products that blend modern aesthetics with lasting
               durability. Whether you're renovating or designing from scratch,
