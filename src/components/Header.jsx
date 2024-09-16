@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
@@ -14,9 +14,22 @@ const navigation = [
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [currentImage, setCurrentImage] = useState(0);
 
+  let imageLists = [
+    "https://plus.unsplash.com/premium_photo-1675744019180-8c7cda9af3e2?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1609946860463-34b73d0d4d8c?q=80&w=1752&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://plus.unsplash.com/premium_photo-1663045495725-89f23b57cfc5?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  ];
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prevIndex) => (prevIndex + 1) % imageLists.length);
+    }, 6000); // Change slide every 3 seconds
+
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, [imageLists.length]);
   return (
-    <div className="bg-white">
+    <div style={{ backgroundImage: `url(${imageLists[currentImage]})` }}>
       <header className="absolute inset-x-0 top-0 z-50">
         <nav
           aria-label="Global"
@@ -128,38 +141,17 @@ export default function Header() {
           />
         </div>
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-              Announcing our next round of funding.{" "}
-              <a href="#" className="font-semibold text-gray-900">
-                <span aria-hidden="true" className="absolute inset-0" />
-                Read more <span aria-hidden="true">&rarr;</span>
-              </a>
-            </div>
-          </div>
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Data to enrich your online business
+              Where Style Meets Function: Luxury Tiles & Sanitary Essentials
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-              fugiat aliqua.
+            <p className="mt-6 text-lg leading-8 text-white">
+              Discover a curated selection of premium tiles and top-quality
+              sanitary products that blend modern aesthetics with lasting
+              durability. Whether you're renovating or designing from scratch,
+              we provide solutions that bring both style and function to your
+              washroom.
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="#"
-                className="rounded-md bg-gray-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
-              >
-                Get started
-              </a>
-              <a
-                href="#"
-                className="text-sm font-semibold leading-6 text-gray-900"
-              >
-                Learn more <span aria-hidden="true">→</span>
-              </a>
-            </div>
           </div>
         </div>
         <div

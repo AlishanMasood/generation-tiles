@@ -8,8 +8,6 @@ import Header from "./components/Header";
 import PartnerCompanies from "./components/PartnerCompanies";
 import ProductList from "./components/ProductList";
 import Promotions from "./components/Promotions";
-import "./index.css";
-import { Carousel } from "@material-tailwind/react";
 function App() {
   return (
     <div className="App">

@@ -15,30 +15,50 @@
 const products = [
   {
     id: 1,
-    name: "Basic Tee",
+    name: "Ceramic Tile",
     href: "#",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+      "https://plus.unsplash.com/premium_photo-1675747693497-0a1d0db0740c?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageAlt: "Front of men's Basic Tee in black.",
     price: "$35",
     color: "Black",
   },
   {
     id: 2,
-    name: "Basic Tee",
+    name: "white ceramic bowl",
     href: "#",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+      "https://images.unsplash.com/photo-1595514535116-d0401260e7cf?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageAlt: "Front of men's Basic Tee in black.",
     price: "$35",
     color: "Black",
   },
   {
     id: 3,
-    name: "Basic Tee",
+    name: "Carved Mirror",
     href: "#",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+      "https://plus.unsplash.com/premium_photo-1677058585435-6eb9bd120b15?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imageAlt: "Front of men's Basic Tee in black.",
+    price: "$35",
+    color: "Black",
+  },
+  {
+    id: 3,
+    name: "Compost Toilet",
+    href: "#",
+    imageSrc:
+      "https://plus.unsplash.com/premium_photo-1664392164625-4f806c5f70f5?q=80&w=1651&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imageAlt: "Front of men's Basic Tee in black.",
+    price: "$35",
+    color: "Black",
+  },
+  {
+    id: 3,
+    name: "Steel shower set",
+    href: "#",
+    imageSrc:
+      "https://images.unsplash.com/photo-1576678433413-202829a1ab98?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageAlt: "Front of men's Basic Tee in black.",
     price: "$35",
     color: "Black",
@@ -51,8 +71,8 @@ export default function ProductList() {
     <>
       <div className="bg-white">
         <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-          <h2 className="text-2xl font-bold tracking-tight text-gray-900">
-            Customers also purchased
+          <h2 className="text-2xl font-bold tracking-tight text-gray-900 text-center">
+            Available Products
           </h2>
 
           <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
