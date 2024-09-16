@@ -1,24 +1,29 @@
-import logo from "./logo.svg";
+import AboutUs from "./components/AboutUs";
+import Categories from "./components/Categories";
+import ClientTestmonials from "./components/ClientTestmonials";
+import ContactUS from "./components/ContactUs";
+import Features from "./components/Features";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import PartnerCompanies from "./components/PartnerCompanies";
+import ProductList from "./components/ProductList";
+import Promotions from "./components/Promotions";
 import "./index.css";
-import Header from "./Header";
-
+import { Carousel } from "@material-tailwind/react";
 function App() {
   return (
     <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+      <Header />
+
+      <Features />
+      <ProductList />
+      <Categories />
+      <Promotions />
+      <AboutUs />
+      <PartnerCompanies />
+      <ClientTestmonials />
+      <ContactUS />
+      <Footer />
     </div>
   );
 }
