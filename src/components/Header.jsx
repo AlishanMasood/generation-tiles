@@ -145,7 +145,7 @@ export default function Header() {
             className="text-center shadow-2xl bg-blend-lighten"
             style={{
               background: "rgba(203,203,203,0.2)",
-              boxShadow: "0px 0px 150px 0px white",
+              boxShadow: "10px 10px 0px 0px white",
               borderRadius: "20px",
               padding: "16px",
               backdropFilter: "blur(5px)",

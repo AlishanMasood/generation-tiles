@@ -14,7 +14,7 @@
 */
 const callouts = [
   {
-    description: "Marbel Tiles",
+    name: "Marbel Tiles",
 
     imageSrc:
       "https://img.freepik.com/free-photo/still-life-putting-up-decorative-vinyls_23-2149683458.jpg?t=st=1726516480~exp=1726520080~hmac=2255cd57294b98dfb35c98b6a55f73a5d6ea96d9237d0126d2afc5dd67d29a4c&w=826",
@@ -23,7 +23,7 @@ const callouts = [
     href: "#",
   },
   {
-    description: "Bath Accessories",
+    name: "Bath Accessories",
 
     imageSrc:
       "https://img.freepik.com/free-photo/shower-head-with-hot-water_23-2149088655.jpg?t=st=1726516416~exp=1726520016~hmac=db783b8570fca763608c04d70c8cbb078388a09c0e349e7b585ba8ced55462d5&w=740",
@@ -32,7 +32,7 @@ const callouts = [
     href: "#",
   },
   {
-    description: "Basins",
+    name: "Basins",
 
     imageSrc:
       "https://img.freepik.com/free-photo/arrangement-pf-bathroom-elements-self-care_23-2148883828.jpg?t=st=1726516285~exp=1726519885~hmac=301ef59b7c1bd9fab158f0465ac1b1650727921ac9f538e1ee3cc6606aa8d1f7&w=996",
@@ -57,9 +57,20 @@ export default function Categories() {
                     src={callout.imageSrc}
                     className="h-full w-full object-cover object-center"
                   />
-                  <p className="hidden text-base font-semibold text-black absolute top-[50%] left-0 right-0 group-hover:block">
-                    {callout.description}
-                  </p>
+                  <div
+                    className="hidden absolute bottom-0 left-0 right-0 group-hover:block"
+                    style={{
+                      background: "rgba(203,203,203,0.2)",
+
+                      // borderRadius: "20px",
+                      padding: "16px",
+                      backdropFilter: "blur(2px)",
+                    }}
+                  >
+                    <p className=" text-base font-semibold text-black ">
+                      {callout.name}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}
