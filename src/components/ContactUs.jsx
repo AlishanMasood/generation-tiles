@@ -14,13 +14,33 @@
 */
 "use client";
 
-import { useState } from "react";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import { Field, Label, Switch } from "@headlessui/react";
-
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 export default function ContactUS() {
-  const [agreed, setAgreed] = useState(false);
+  const [message, setMessage] = useState(false);
+  const formRef = useRef();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setMessage(true);
+    emailjs
+      .sendForm(
+        "service_57paroy",
+        "template_eaa63of",
+        formRef.current,
+        "5s4YsmI96ICyGAahh"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    console.log(formRef.current);
 
+    // e.target.reset();
+  };
   return (
     <div className="isolate bg-white px-6  sm:py-32 lg:px-8">
       <div
@@ -37,9 +57,9 @@ export default function ContactUS() {
         </p>
       </div>
       <form
-        action="#"
-        method="POST"
         className="mx-auto mt-16 max-w-xl sm:mt-20"
+        ref={formRef}
+        onSubmit={handleSubmit}
       >
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
@@ -137,6 +157,7 @@ export default function ContactUS() {
             Let's talk
           </button>
         </div>
+        {message && <span>Thanks, I'll reply ASAP :)</span>}
       </form>
     </div>
   );
