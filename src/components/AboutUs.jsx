@@ -23,7 +23,7 @@ export default function AboutUs() {
                   About Us
                 </h6>
                 <div class="w-full flex-col justify-start lg:items-start items-center gap-3 flex ">
-                  <h2 class="text-gray-900 text-4xl font-bold font-manrope leading-normal lg:text-start text-center">
+                  <h2 class="text-7xl font-bold tracking-tight text-gray-900 text-center">
                     The Tale of Our Achievement Story
                   </h2>
                   <p class="text-gray-500 text-base font-normal leading-relaxed lg:text-start text-center">
