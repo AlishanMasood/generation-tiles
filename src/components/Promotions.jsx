@@ -4,7 +4,7 @@ export default function Promotions() {
       <div className="pb-16 pt-16 sm:pb-12 sm:pt-24 lg:pb-16 lg:pt-16">
         <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8 flex justify-between flex-col items-center gap-8">
           <div className="sm:max-w-lg flex flex-col items-center justify-center gap-1 text-center">
-            <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+            <h2 className="text-7xl font-bold tracking-tight text-gray-900 text-center">
               Summer styles are finally here
             </h2>
             <p className="mt-4 text-xl text-gray-500">

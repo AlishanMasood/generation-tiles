@@ -48,7 +48,7 @@ export default function ContactUS() {
         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
       ></div>
       <div className="mx-auto max-w-xl text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <h2 className="text-7xl font-bold tracking-tight text-gray-900 text-center">
           Contact Us
         </h2>
         <p className="mt-2 text-lg leading-8 text-gray-600">
