@@ -14,7 +14,6 @@ const LandingPage = () => {
   return (
     <>
       <Header />
-      <Features />
       <ProductList />
       <Categories />
       {/* <Promotions /> */}
@@ -22,6 +21,7 @@ const LandingPage = () => {
       <PartnerCompanies />
       <ClientTestmonials />
       <ContactUS />
+      <Features />
       <Footer />
     </>
   );
