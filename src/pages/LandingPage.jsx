@@ -1,28 +1,35 @@
-import React from "react";
-import Header from "./../components/Header";
-import Features from "../components/Features";
-import ProductList from "./../components/ProductList";
-import Categories from "../components/Categories";
-// import Promotions from "./../components/Promotions";
-// import AboutUs from "./../components/AboutUs";
-import PartnerCompanies from "./../components/PartnerCompanies";
-import ClientTestmonials from "./../components/ClientTestmonials";
-import ContactUS from "../components/ContactUs";
-import Footer from "./../components/Footer";
+import React, { Suspense } from "react";
+import Skeleton from "../components/Skeleton";
 
+const Categories = React.lazy(() => import("../components/Categories"));
+// const ProductList = React.lazy(() => import("./../components/ProductList"));
+const Features = React.lazy(() => import("../components/Features"));
+const Header = React.lazy(() => import("../components/Header"));
+// const Promotions = React.lazy(() => import("../components/Promotions"));
+// const AboutUs = React.lazy(() => import("../components/AboutUs"));
+// const PartnerCompanies = React.lazy(() =>
+//   import("../components/PartnerCompanies")
+// );
+const ClientTestmonials = React.lazy(() =>
+  import("../components/ClientTestmonials")
+);
+const Footer = React.lazy(() => import("./../components/Footer"));
+const ContactUS = React.lazy(() => import("../components/ContactUs"));
 const LandingPage = () => {
   return (
     <>
-      <Header />
-      <ProductList />
-      <Categories />
-      {/* <Promotions /> */}
-      {/* <AboutUs /> */}
-      <PartnerCompanies />
-      <ClientTestmonials />
-      <ContactUS />
-      <Features />
-      <Footer />
+      <Suspense fallback={<Skeleton />}>
+        <Header />
+        {/* <ProductList /> */}
+        <Categories />
+        {/* <Promotions /> */}
+        {/* <AboutUs /> */}
+        {/* <PartnerCompanies /> */}
+        <ClientTestmonials />
+        <ContactUS />
+        <Features />
+        <Footer />
+      </Suspense>
     </>
   );
 };
