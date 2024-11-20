@@ -1,14 +1,21 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import LandingPage from "./pages/LandingPage";
-import SingleProductPage from "./pages/SingleProductPage";
-import SubCategoriesPage from "./pages/SubCategoriesPage";
+import React, { Suspense } from "react";
+import Skeleton from "./components/Skeleton";
+// const Skeleton = React.lazy(()=>import("./components/Skeleton"))
+const LandingPage = React.lazy(() => import("./pages/LandingPage"));
+const SubCategoriesPage = React.lazy(() => import("./pages/SubCategoriesPage"));
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/categorie/:subcategory" element={<SubCategoriesPage />} />
-      </Routes>
+      <Suspense fallback={<Skeleton />}>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route
+            path="/categorie/:subcategory"
+            element={<SubCategoriesPage />}
+          />
+        </Routes>
+      </Suspense>
 
       {/* <SingleProductPage /> */}
       {/* <LandingPage /> */}
