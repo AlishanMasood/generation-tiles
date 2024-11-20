@@ -7,7 +7,7 @@ export default function Categories() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32 text-center">
           <h2 className="text-7xl font-bold tracking-tight text-gray-900 text-center">
-            Our Collection
+            Products
           </h2>
           <div className="mt-6 space-y-12 gap-y-6 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
             {callouts.map((callout) => (
@@ -16,26 +16,16 @@ export default function Categories() {
                 className="group relative"
                 onClick={() => navigate(`/categorie/${callout.subcategory}`)}
               >
-                <div className="group relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-90 sm:h-64">
+                <div className="group h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-90 sm:h-64">
                   <img
                     alt={callout.imageAlt}
                     src={callout.imageSrc}
-                    className="h-full w-full object-cover object-center"
+                    className="h-[85%] w-full object-cover object-center"
                   />
-                  <div
-                    className="hidden absolute bottom-0 left-0 right-0 group-hover:block"
-                    style={{
-                      background: "rgba(203,203,203,0.2)",
 
-                      // borderRadius: "20px",
-                      padding: "16px",
-                      backdropFilter: "blur(2px)",
-                    }}
-                  >
-                    <p className=" text-base font-semibold text-black ">
-                      {callout.name}
-                    </p>
-                  </div>
+                  <p className=" text-base font-semibold text-black group-hover:text-red-400 ">
+                    {callout.name}
+                  </p>
                 </div>
               </div>
             ))}
